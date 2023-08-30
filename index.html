@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="paymentApp">
+<head>
+    <title>Pagamento</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div ng-controller="PaymentController">
+        <div class="navbar">
+            <div class="navbar-item">
+                <a href="#" class="back-button">
+                    <span class="back-icon">&larr;</span>
+                </a>
+            </div>
+            <div class="navbar-title">Pagamento</div>
+        </div>
+        
+        <h4>Insira os dados para concluir a contratação via cartão de crédito.</h4>
+<form class="payment-form">
+    
+    <input type="text" ng-model="payment.cardNumber"  placeholder="Número do cartão" required><br>
+
+    <input type="text" ng-model="payment.cardName" placeholder="Nome de titular" required><br>
+
+    <input type="text" ng-model="payment.expiryMonth" placeholder="CPF do titular" required><br>
+
+    <input type="text" ng-model="payment.expiryYear"  placeholder="Validade" required><br>
+
+    <input type="text" ng-model="payment.cvv" placeholder="Código de Segurança" required><br>
+
+    <button ng-click="processPayment()"  class="custom-pagar-button">Pagar</button><br>
+    <button ng-click="processPayment()" class="custom-voltar-button">Voltar</button>
+</form>
+<footer class="footer">
+    <div class="footer-links">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-chart-bar"></i> Plantões</a>
+        <a href="#"><i class="fas fa-heart"></i> Favoritos</a>
+        <a href="#"><i class="fas fa-user"></i> Minha Conta</a>
+    </div>
+</footer>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
